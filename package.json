@@ -1,0 +1,30 @@
+{
+  "name": "websiteticket",
+  "version": "1.0.0",
+  "description": "This is my project to create a website to book ticket from movie theater",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ostomst/ticketWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ostomst/ticketWebsite/issues"
+  },
+  "homepage": "https://github.com/ostomst/ticketWebsite#readme",
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
