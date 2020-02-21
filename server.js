@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const path = require("path");
 
 const app = express();
 const port = 3000;
@@ -16,8 +17,8 @@ mongoose.connect(
 );
 
 //Router
-const registerRouter = require("./routes/register");
-const loginRouter = require("./routes/login");
+const userRouter = require("./routes/user");
+
 app.use(express.json());
 
 //Home page
@@ -25,10 +26,9 @@ app.get("/", (req, res) => {
   res.send("You are in HomePage");
 });
 
-//Register page
-app.use("/register", registerRouter);
+//Register/Login page
+app.use("/user", userRouter);
 
-//Login page
-app.use("/login", loginRouter);
+//Movie
 
 app.listen(port, () => console.log("Live on " + port));
