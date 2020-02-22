@@ -1,7 +1,9 @@
 const express = require("express");
+const expressSession = require("express-session");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
+const pug = require("pug");
 
 const app = express();
 const port = 3000;
@@ -20,10 +22,12 @@ mongoose.connect(
 const userRouter = require("./routes/user");
 
 app.use(express.json());
+app.set("view engine", "pug");
+app.set("views", "views");
 
 //Home page
-app.get("/", (req, res) => {
-  res.send("You are in HomePage");
+app.get("/user/login", (req, res) => {
+  res.render("login");
 });
 
 //Register/Login page

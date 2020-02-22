@@ -40,8 +40,11 @@ router.post("/login", async (req, res) => {
   const { error } = loginValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
+  console.log(req.body);
+
   //  Check exist Email
   const user = await User.findOne({ email: req.body.email });
+
   if (!user) return res.status(400).send("Cant find your Email");
 
   //Hash password
