@@ -1,0 +1,28 @@
+doctype html
+head
+  title Register
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  link(rel='stylesheet' type='text/css' href='/frontend/register.css')
+script(type='txt/javascript' src='script')
+#register-container.container-fluid
+  .register
+    form
+      .title-register
+        b Create Account
+      .form-group
+        label(for='email1') Name
+        input#exampleInputEmail1.formInput(type='email' aria-describedby='emailHelp' placeholder='Enter your email')
+      .form-group
+        label(for='email1') Email address
+        input#exampleInputEmail1.formInput(type='email' aria-describedby='emailHelp' placeholder='Enter your email')
+      .form-group
+        label(for='password1') Password
+        input#exampleInputPassword1.formInput(type='password' placeholder='Enter your password')
+      .form-group
+        label(for='password1') Confirmed password
+        input#exampleInputPassword1.formInput(type='password' placeholder='Comfirm your password')
+      button#registerButton.btn.btn-success(type='submit') Register
+      #div-linkTo
+        a(href='#') Back to sign in
+      
+        // <br><a href="#">Forgot password</a>
