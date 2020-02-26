@@ -1,0 +1,25 @@
+doctype html
+head
+  title Login
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  link(rel='stylesheet' type='text/css' href='/frontend/login.css')
+script(type='txt/javascript' href='/script')
+
+
+
+#login-container.container-fluid
+  .login
+    form
+      .title-login
+        b Sign In Account
+      .form-group
+        label(for='exampleInputEmail1') Email address
+        input#email.formInput(type='email' aria-describedby='emailHelp' placeholder='Enter your email')
+      .form-group
+        label(for='exampleInputPassword1') Password
+        input#password.formInput(type='password' placeholder='Enter your password')
+      button#loginButton.btn.btn-success(type='submit') Log in
+      #div-linkTo
+        a(href='#') Create account
+        br
+        a(href='#') Forgot password
